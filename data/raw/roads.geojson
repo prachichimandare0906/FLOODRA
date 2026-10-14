@@ -1,0 +1,85 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Test Road 1",
+        "type": "test_road"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.7772942490429395,
+            38.09201757735873
+          ],
+          [
+            -0.7404992550054039,
+            38.117314135759536
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Test Road 2",
+        "type": "test_road"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.7795939361702855,
+            38.1104150743775
+          ],
+          [
+            -0.7427989421327499,
+            38.1104150743775
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Test Road 3",
+        "type": "test_road"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.7634961262788637,
+            38.085118515976696
+          ],
+          [
+            -0.7634961262788637,
+            38.12421319714157
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Test Road 4",
+        "type": "test_road"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -0.7749945619155936,
+            38.11961382288688
+          ],
+          [
+            -0.7473983163874418,
+            38.089717890231384
+          ]
+        ]
+      }
+    }
+  ]
+}

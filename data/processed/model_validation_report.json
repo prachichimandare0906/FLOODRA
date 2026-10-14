@@ -1,0 +1,63 @@
+{
+  "title": "FLOODRA Raster Data Quality Report",
+  "checks_passed": 5,
+  "checks_total": 5,
+  "structural_validation_passed": true,
+  "checks": [
+    {
+      "name": "Flood mask raster",
+      "passed": true,
+      "file": "data\\processed\\flood_mask.tif",
+      "width": 512,
+      "height": 512,
+      "bands": 1,
+      "crs": "EPSG:4326",
+      "dtype": "uint8",
+      "nodata": 0.0,
+      "valid_pixels": 43252,
+      "message": "Raster opened successfully."
+    },
+    {
+      "name": "Severity raster",
+      "passed": true,
+      "file": "data\\processed\\flood_severity.tif",
+      "width": 512,
+      "height": 512,
+      "bands": 1,
+      "crs": "EPSG:4326",
+      "dtype": "uint8",
+      "nodata": 255.0,
+      "valid_pixels": 262144,
+      "message": "Raster opened successfully."
+    },
+    {
+      "name": "Raster alignment",
+      "passed": true,
+      "message": "Rasters share the same grid and CRS."
+    },
+    {
+      "name": "Severity class values",
+      "passed": true,
+      "unique_values": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "message": "All valid pixels use classes 0, 1, 2, or 3."
+    },
+    {
+      "name": "Flood mask values",
+      "passed": true,
+      "unique_values": [
+        1.0
+      ],
+      "message": "Mask contains only 0 and 1."
+    }
+  ],
+  "limitations": [
+    "These checks assess file integrity and class encoding, not flood-detection accuracy.",
+    "No independent ground-truth flood labels are evaluated.",
+    "Severity classes are relative heuristic categories, not measured flood depths."
+  ]
+}

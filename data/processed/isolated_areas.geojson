@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"name": "isolated_areas",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "name": "Daya Nueva", "place_type": "village", "population": "1655", "flooded": false, "flood_score": 0, "road_score": 100, "isolation_score": 40.0, "isolation_level": "MODERATE", "nearest_risky_road_m": 407.07 }, "geometry": { "type": "Point", "coordinates": [ -0.7609301, 38.1138879 ] } },
+{ "type": "Feature", "properties": { "name": "Daya Vieja", "place_type": "village", "population": "551", "flooded": false, "flood_score": 0, "road_score": 100, "isolation_score": 40.0, "isolation_level": "MODERATE", "nearest_risky_road_m": 473.24 }, "geometry": { "type": "Point", "coordinates": [ -0.7380602, 38.105114 ] } },
+{ "type": "Feature", "properties": { "name": "La Florida", "place_type": "neighbourhood", "population": "nan", "flooded": true, "flood_score": 100, "road_score": 100, "isolation_score": 100.0, "isolation_level": "CRITICAL", "nearest_risky_road_m": 621.69 }, "geometry": { "type": "Point", "coordinates": [ -0.7629548, 38.1280374 ] } },
+{ "type": "Feature", "properties": { "name": "Barrio La Bodega", "place_type": "neighbourhood", "population": "nan", "flooded": false, "flood_score": 0, "road_score": 100, "isolation_score": 40.0, "isolation_level": "MODERATE", "nearest_risky_road_m": 824.85 }, "geometry": { "type": "Point", "coordinates": [ -0.7650439, 38.1035327 ] } },
+{ "type": "Feature", "properties": { "name": "Puebla de Rocamora", "place_type": "neighbourhood", "population": "nan", "flooded": false, "flood_score": 0, "road_score": 100, "isolation_score": 40.0, "isolation_level": "MODERATE", "nearest_risky_road_m": 443.25 }, "geometry": { "type": "Point", "coordinates": [ -0.7694975, 38.1177012 ] } },
+{ "type": "Feature", "properties": { "name": "Los Martínez Segundo Barrio", "place_type": "neighbourhood", "population": "48", "flooded": false, "flood_score": 0, "road_score": 100, "isolation_score": 40.0, "isolation_level": "MODERATE", "nearest_risky_road_m": 266.71 }, "geometry": { "type": "Point", "coordinates": [ -0.7442934, 38.1184885 ] } }
+]
+}

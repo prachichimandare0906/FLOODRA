@@ -1,0 +1,145 @@
+{
+  "project": "FLOODRA",
+  "generated_at_utc": "2026-10-14T20:20:50.639869+00:00",
+  "method": "Rule-based decision support using existing heuristic outputs",
+  "summary": {
+    "settlements_assessed": 6,
+    "priority_counts": {
+      "CRITICAL": 1,
+      "HIGH": 1,
+      "MEDIUM": 4
+    },
+    "connectivity_counts": {
+      "CONNECTED": 6
+    },
+    "road_risk_counts": {
+      "CLEAR": 1412,
+      "LOW RISK": 78,
+      "HIGH RISK": 12,
+      "MODERATE RISK": 19
+    }
+  },
+  "decisions": [
+    {
+      "settlement": "La Florida",
+      "priority_level": "CRITICAL",
+      "rescue_score": 79.0,
+      "isolation_level": "CRITICAL",
+      "connectivity_status": "CONNECTED",
+      "nearest_risky_road_level": "LOW RISK",
+      "reasons": [
+        "Critical heuristic isolation score"
+      ],
+      "recommended_action": "Urgently verify conditions and access with local emergency authorities.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7629548,
+          38.1280374
+        ]
+      }
+    },
+    {
+      "settlement": "Daya Vieja",
+      "priority_level": "HIGH",
+      "rescue_score": 62.5,
+      "isolation_level": "MODERATE",
+      "connectivity_status": "CONNECTED",
+      "nearest_risky_road_level": "MODERATE RISK",
+      "reasons": [
+        "Nearest classified road risk: MODERATE RISK"
+      ],
+      "recommended_action": "Monitor conditions and validate reported exposure.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7380602,
+          38.105114
+        ]
+      }
+    },
+    {
+      "settlement": "Daya Nueva",
+      "priority_level": "MEDIUM",
+      "rescue_score": 52.0,
+      "isolation_level": "MODERATE",
+      "connectivity_status": "CONNECTED",
+      "nearest_risky_road_level": "LOW RISK",
+      "reasons": [
+        "Ranked using the available heuristic rescue-priority score"
+      ],
+      "recommended_action": "Monitor conditions and validate reported exposure.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7609301,
+          38.1138879
+        ]
+      }
+    },
+    {
+      "settlement": "Barrio La Bodega",
+      "priority_level": "MEDIUM",
+      "rescue_score": 52.0,
+      "isolation_level": "MODERATE",
+      "connectivity_status": "CONNECTED",
+      "nearest_risky_road_level": "LOW RISK",
+      "reasons": [
+        "Ranked using the available heuristic rescue-priority score"
+      ],
+      "recommended_action": "Monitor conditions and validate reported exposure.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7650439,
+          38.1035327
+        ]
+      }
+    },
+    {
+      "settlement": "Puebla de Rocamora",
+      "priority_level": "MEDIUM",
+      "rescue_score": 52.0,
+      "isolation_level": "MODERATE",
+      "connectivity_status": "CONNECTED",
+      "nearest_risky_road_level": "LOW RISK",
+      "reasons": [
+        "Ranked using the available heuristic rescue-priority score"
+      ],
+      "recommended_action": "Monitor conditions and validate reported exposure.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7694975,
+          38.1177012
+        ]
+      }
+    },
+    {
+      "settlement": "Los Mart\u00ednez Segundo Barrio",
+      "priority_level": "MEDIUM",
+      "rescue_score": 52.0,
+      "isolation_level": "MODERATE",
+      "connectivity_status": "CONNECTED",
+      "nearest_risky_road_level": "LOW RISK",
+      "reasons": [
+        "Ranked using the available heuristic rescue-priority score"
+      ],
+      "recommended_action": "Monitor conditions and validate reported exposure.",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7442934,
+          38.1184885
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "Flood classifications have not been independently validated.",
+    "Priority scores are heuristic rankings, not calibrated probabilities.",
+    "Connectivity results are road-graph scenarios, not proof of isolation.",
+    "Recommendations require verification with current local conditions.",
+    "A missing connectivity match is reported as UNKNOWN."
+  ]
+}

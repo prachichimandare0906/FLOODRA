@@ -1,0 +1,16 @@
+{
+"type": "FeatureCollection",
+"name": "real_settlements",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "element": "node", "id": 248460342, "name": "Formentera del Segura", "place": "village", "population": "3084" }, "geometry": { "type": "Point", "coordinates": [ -0.7459956, 38.0851143 ] } },
+{ "type": "Feature", "properties": { "element": "node", "id": 248460468, "name": "Las Heredades", "place": "hamlet", "population": "432" }, "geometry": { "type": "Point", "coordinates": [ -0.7623595, 38.0905114 ] } },
+{ "type": "Feature", "properties": { "element": "node", "id": 248462843, "name": "Daya Nueva", "place": "village", "population": "1655" }, "geometry": { "type": "Point", "coordinates": [ -0.7609301, 38.1138879 ] } },
+{ "type": "Feature", "properties": { "element": "node", "id": 248462865, "name": "Daya Vieja", "place": "village", "population": "551" }, "geometry": { "type": "Point", "coordinates": [ -0.7380602, 38.105114 ] } },
+{ "type": "Feature", "properties": { "element": "node", "id": 6401490543, "name": "La Florida", "place": "neighbourhood", "population": null }, "geometry": { "type": "Point", "coordinates": [ -0.7629548, 38.1280374 ] } },
+{ "type": "Feature", "properties": { "element": "node", "id": 6605046374, "name": "Barrio La Bodega", "place": "neighbourhood", "population": null }, "geometry": { "type": "Point", "coordinates": [ -0.7650439, 38.1035327 ] } },
+{ "type": "Feature", "properties": { "element": "node", "id": 6605057906, "name": "Puebla de Rocamora", "place": "neighbourhood", "population": null }, "geometry": { "type": "Point", "coordinates": [ -0.7694975, 38.1177012 ] } },
+{ "type": "Feature", "properties": { "element": "node", "id": 12282459325, "name": "Los Martínez Segundo Barrio", "place": "neighbourhood", "population": "48" }, "geometry": { "type": "Point", "coordinates": [ -0.7442934, 38.1184885 ] } },
+{ "type": "Feature", "properties": { "element": "node", "id": 12282459327, "name": "Las Heredades", "place": "hamlet", "population": "241" }, "geometry": { "type": "Point", "coordinates": [ -0.7605252, 38.0908369 ] } }
+]
+}

@@ -1,0 +1,32 @@
+{
+    "project": "FLOODRA",
+    "report_type": "Flood analysis quality report",
+    "method": "Threshold-based baseline flood-mask classification; not a trained or independently validated AI model.",
+    "validation_status": "NOT INDEPENDENTLY VALIDATED",
+    "source_raster": "data\\processed\\flood_mask.tif",
+    "raster": {
+        "width_pixels": 512,
+        "height_pixels": 512,
+        "total_pixels": 262144,
+        "crs": "EPSG:4326",
+        "pixel_area_coordinate_units_squared": 8.07e-09
+    },
+    "flood_detection": {
+        "flooded_pixels": 43252,
+        "non_flood_pixels": 218892,
+        "flooded_pixel_percentage": 16.5
+    },
+    "other_outputs": {
+        "severity_raster_exists": true,
+        "road_features": 1521,
+        "isolation_locations": 6,
+        "rescue_priority_locations": 6
+    },
+    "limitations": [
+        "The flood mask uses a threshold rather than a trained model.",
+        "Flood detections have not been independently validated.",
+        "Road risk depends on intersection with the generated flood mask.",
+        "Isolation and rescue scores are heuristic estimates.",
+        "The report does not establish actual damage or safe rescue routes."
+    ]
+}

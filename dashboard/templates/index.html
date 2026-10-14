@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLOODRA | Disaster Intelligence Platform</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo-section">
+            <div class="logo-box">🌊</div>
+            <div class="logo-text">
+                <h1>FLOODRA</h1>
+                <p>SPACE → RESCUE</p>
+            </div>
+        </div>
+
+        <div class="system-card">
+            <div class="system-row">
+                <span class="online-dot"></span>
+                <strong>SYSTEM ONLINE</strong>
+            </div>
+            <p>Satellite analysis ready</p>
+        </div>
+
+        <nav class="sidebar-nav">
+            <div class="nav-item active"><span class="nav-icon">◈</span><span>Mission Control</span></div>
+            <div class="nav-item"><span class="nav-icon">◎</span><span>Flood Analysis</span></div>
+            <div class="nav-item"><span class="nav-icon">◇</span><span>Infrastructure</span></div>
+            <div class="nav-item"><span class="nav-icon">△</span><span>Rescue Priority</span></div>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="top-header">
+            <div class="page-title">
+                <p class="platform-label">DISASTER INTELLIGENCE PLATFORM</p>
+                <h2>Flood Damage &amp; Connectivity Map</h2>
+            </div>
+            <div class="header-actions">
+                <button id="refreshButton" class="refresh-button">⟳ Refresh Analysis</button>
+                <div class="profile-circle">F</div>
+            </div>
+        </header>
+
+        <!-- DASHBOARD STATISTICS -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon flood-icon">🌊</div>
+                <div class="stat-info">
+                    <p>FLOOD EXTENT</p>
+                    <h3 id="floodExtent">0 km²</h3>
+                    <span>Detected area</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon road-icon">🚧</div>
+                <div class="stat-info">
+                    <p>HIGH-RISK ROADS</p>
+                    <h3 id="highRiskRoads">0</h3>
+                    <span>Infrastructure exposure</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon isolation-icon">⚠</div>
+                <div class="stat-info">
+                    <p>ISOLATION RISKS</p>
+                    <h3 id="isolationCount">0</h3>
+                    <span>Potentially inaccessible</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon critical-icon">🚨</div>
+                <div class="stat-info">
+                    <p>CRITICAL ZONES</p>
+                    <h3 id="criticalCount">0</h3>
+                    <span>Immediate attention</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAP -->
+        <section class="map-section">
+            <div class="map-header">
+                <div>
+                    <p class="map-label">LIVE GEOSPATIAL VIEW</p>
+                    <h3>Emergency Situation Map</h3>
+                </div>
+                <div class="map-legend">
+                    <div class="legend-item"><span class="legend-dot flood"></span><span>Flood</span></div>
+                    <div class="legend-item"><span class="legend-dot road"></span><span>Road Risk</span></div>
+                    <div class="legend-item"><span class="legend-dot critical"></span><span>Critical</span></div>
+                </div>
+            </div>
+            <div id="map"></div>
+        </section>
+
+        <!-- EMERGENCY INSIGHT -->
+        <section class="insight-section">
+            <div class="insight-left">
+                <div class="insight-symbol">🚨</div>
+                <div>
+                    <p class="insight-label">EMERGENCY INTELLIGENCE</p>
+                    <h3>Response Recommendation</h3>
+                    <p id="insight">FLOODRA is analyzing satellite, infrastructure and accessibility data.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FLOOD ANALYSIS REPORT -->
+        <section class="insight-section" id="analysisReportSection">
+            <div class="insight-left">
+                <div class="insight-symbol">📊</div>
+                <div>
+                    <p class="insight-label">MODEL TRANSPARENCY</p>
+                    <h3>Flood Analysis Report</h3>
+                    <p id="reportStatus">Loading analysis report...</p>
+
+                    <div class="report-grid">
+                        <div class="report-item"><span>Flooded pixels</span><strong id="reportFloodPixels">—</strong></div>
+                        <div class="report-item"><span>Flooded pixel percentage</span><strong id="reportFloodPercentage">—</strong></div>
+                        <div class="report-item"><span>Road features</span><strong id="reportRoadFeatures">—</strong></div>
+                        <div class="report-item"><span>Isolation locations</span><strong id="reportIsolationLocations">—</strong></div>
+                        <div class="report-item"><span>Rescue-priority locations</span><strong id="reportPriorityLocations">—</strong></div>
+                    </div>
+
+                    <p id="reportValidation">Validation status will appear here.</p>
+                    <a href="/api/download-report" class="refresh-button">⬇ Download Analysis Report</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROAD RISK DISTRIBUTION -->
+        <section class="insight-section" id="roadRiskSection">
+            <div>
+                <p class="insight-label">INFRASTRUCTURE ANALYTICS</p>
+                <h3>Road Risk Distribution</h3>
+                <p id="roadRiskTotal">Loading road data...</p>
+                <div id="roadRiskChart" class="risk-chart">
+                    <p>Loading risk distribution...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESCUE PRIORITY TABLE -->
+        <section class="insight-section" id="rescueTableSection">
+            <div>
+                <p class="insight-label">EMERGENCY OPERATIONS</p>
+                <h3>Settlement Rescue Priorities</h3>
+                <p>Candidate locations ranked by the current heuristic model.</p>
+                <div class="table-wrapper">
+                    <table class="rescue-table">
+                        <thead>
+                            <tr>
+                                <th>Settlement</th>
+                                <th>Isolation</th>
+                                <th>Rescue Score</th>
+                                <th>Priority</th>
+                            </tr>
+                        </thead>
+                        <tbody id="rescueTableBody">
+                            <tr><td colspan="4">Loading rescue priorities...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONNECTIVITY SUMMARY -->
+        <section class="insight-section" id="connectivitySummarySection">
+            <div>
+                <p class="insight-label">NETWORK RESILIENCE</p>
+                <h3>Connectivity Scenario</h3>
+                <p id="connectivityStatus">Loading connectivity results...</p>
+
+                <div class="report-grid">
+                    <div class="report-item"><span>Settlement locations analyzed</span><strong id="connectivityTotal">—</strong></div>
+                    <div class="report-item"><span>Connected to largest component</span><strong id="connectivityConnected">—</strong></div>
+                    <div class="report-item"><span>Outside largest component</span><strong id="connectivityOutside">—</strong></div>
+                </div>
+
+                <p id="connectivityDisclaimer">Scenario estimates are not verified road-accessibility results.</p>
+            </div>
+        </section>
+
+        <!-- RESPONSE DECISION ENGINE -->
+        <section class="insight-section" id="responseDecisionSection">
+            <div>
+                <p class="insight-label">DECISION SUPPORT</p>
+                <h3>Response Decision Engine</h3>
+                <p id="decisionReportStatus">Loading response decisions...</p>
+
+                <div class="report-grid">
+                    <div class="report-item"><span>Locations assessed</span><strong id="decisionTotal">—</strong></div>
+                    <div class="report-item"><span>Critical priority</span><strong id="decisionCritical">—</strong></div>
+                    <div class="report-item"><span>Potentially disconnected</span><strong id="decisionDisconnected">—</strong></div>
+                    <div class="report-item"><span>Unknown connectivity</span><strong id="decisionUnknown">—</strong></div>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="rescue-table">
+                        <thead>
+                            <tr>
+                                <th>Settlement</th>
+                                <th>Priority</th>
+                                <th>Score</th>
+                                <th>Connectivity</th>
+                                <th>Reason / recommended follow-up</th>
+                            </tr>
+                        </thead>
+                        <tbody id="decisionTableBody">
+                            <tr><td colspan="5">Loading response decisions...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p id="decisionDisclaimer">Decision support is heuristic and must be verified with current local conditions.</p>
+            </div>
+        </section>
+        
+<!-- MODEL VALIDATION PANEL -->
+<section class="insight-section" id="modelValidationSection">
+    <div>
+        <p class="insight-label">QUALITY ASSURANCE</p>
+        <h3>Model Validation &amp; Data Integrity</h3>
+        <p id="modelValidationStatus">Loading validation report...</p>
+
+        <div class="report-grid">
+            <div class="report-item">
+                <span>Flood mask</span>
+                <strong id="validationFloodMask">—</strong>
+            </div>
+            <div class="report-item">
+                <span>Severity raster</span>
+                <strong id="validationSeverity">—</strong>
+            </div>
+            <div class="report-item">
+                <span>Raster alignment</span>
+                <strong id="validationAlignment">—</strong>
+            </div>
+            <div class="report-item">
+                <span>Checks completed</span>
+                <strong id="validationChecks">—</strong>
+            </div>
+        </div>
+
+        <div id="validationCheckList"></div>
+
+        <p id="validationDisclaimer">
+            Structural checks do not establish flood-detection accuracy.
+        </p>
+    </div>
+</section>
+
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

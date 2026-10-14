@@ -1,0 +1,1267 @@
+/* =========================================================
+   FLOODRA
+   DISASTER INTELLIGENCE PLATFORM
+   Screenshot-matched UI
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+    font-family:
+        Inter,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: #061321;
+
+    color: #f4f8fc;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar {
+
+    position: fixed;
+
+    left: 0;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 286px;
+
+    background: #071624;
+
+    border-right:
+        1px solid #183248;
+
+    z-index: 1000;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo-section {
+
+    height: 120px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding-left: 18px;
+
+    border-bottom:
+        1px solid #183248;
+}
+
+
+.logo-box {
+
+    width: 51px;
+
+    height: 54px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1497d5,
+            #1684b8
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+    box-shadow:
+        0 0 20px rgba(20, 151, 213, 0.15);
+}
+
+
+.logo-text h1 {
+
+    font-size: 28px;
+
+    line-height: 1;
+
+    letter-spacing: 1.7px;
+
+    font-weight: 800;
+}
+
+
+.logo-text p {
+
+    margin-top: 8px;
+
+    color: #5894bc;
+
+    font-size: 10px;
+
+    letter-spacing: 2.6px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   SYSTEM CARD
+   ========================================================= */
+
+.system-card {
+
+    margin: 0;
+
+    height: 108px;
+
+    padding: 27px 15px;
+
+    border-bottom:
+        1px solid #183248;
+
+    border-radius: 0;
+}
+
+
+.system-row {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    font-size: 13px;
+}
+
+
+.online-dot {
+
+    width: 11px;
+
+    height: 11px;
+
+    border-radius: 50%;
+
+    background: #20ce88;
+
+    box-shadow:
+        0 0 10px rgba(32, 206, 136, 0.4);
+}
+
+
+.system-card strong {
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.system-card p {
+
+    margin-left: 24px;
+
+    margin-top: 6px;
+
+    color: #54809e;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.sidebar-nav {
+
+    padding-top: 19px;
+}
+
+
+.nav-item {
+
+    height: 53px;
+
+    margin: 0 0 9px 0;
+
+    padding-left: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #7194b0;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    border-radius: 0 10px 10px 0;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.nav-item:hover {
+
+    background: #0c2234;
+
+    color: #b9d6e9;
+}
+
+
+.nav-item.active {
+
+    background: #102d43;
+
+    color: #ffffff;
+}
+
+
+.nav-icon {
+
+    width: 17px;
+
+    text-align: center;
+
+    color: #72a8c9;
+
+    font-size: 14px;
+}
+
+
+.nav-item.active .nav-icon {
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.main-content {
+
+    margin-left: 286px;
+
+    min-height: 100vh;
+
+    padding:
+        39px 47px 50px 36px;
+
+    background: #061321;
+}
+
+
+/* =========================================================
+   TOP HEADER
+   ========================================================= */
+
+.top-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    margin-bottom: 30px;
+}
+
+
+.platform-label {
+
+    color: #14aee8;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 7px;
+}
+
+
+.page-title h2 {
+
+    font-size: 34px;
+
+    line-height: 1.15;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+}
+
+
+.header-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+/* =========================================================
+   REFRESH BUTTON
+   ========================================================= */
+
+.refresh-button {
+
+    height: 49px;
+
+    padding:
+        0 19px;
+
+    background: #0c2031;
+
+    border:
+        1px solid #29465d;
+
+    border-radius: 10px;
+
+    color: #e8f2fa;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.refresh-button:hover {
+
+    background: #102b40;
+
+    border-color: #39718f;
+}
+
+
+/* =========================================================
+   PROFILE
+   ========================================================= */
+
+.profile-circle {
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #1383b7;
+
+    color: white;
+
+    font-size: 19px;
+}
+
+
+/* =========================================================
+   STATISTICS GRID
+   ========================================================= */
+
+.stats-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   STAT CARD
+   ========================================================= */
+
+.stat-card {
+
+    height: 155px;
+
+    background: #0a1c2b;
+
+    border:
+        1px solid #1a394e;
+
+    border-radius: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 19px 22px;
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.stat-card:hover {
+
+    border-color: #28526d;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   STAT ICONS
+   ========================================================= */
+
+.stat-icon {
+
+    width: 53px;
+
+    height: 53px;
+
+    min-width: 53px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 22px;
+
+    background: #102e42;
+}
+
+
+.flood-icon {
+
+    background: #0e3145;
+}
+
+
+.road-icon {
+
+    background: #0e2b3e;
+}
+
+
+.isolation-icon {
+
+    background: #102c3e;
+}
+
+
+.critical-icon {
+
+    background: #102c3e;
+}
+
+
+/* =========================================================
+   STAT TEXT
+   ========================================================= */
+
+.stat-info p {
+
+    color: #5e91b3;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+
+.stat-info h3 {
+
+    color: #f2f7fb;
+
+    font-size: 27px;
+
+    line-height: 1.1;
+
+    font-weight: 800;
+
+    margin-bottom: 7px;
+}
+
+
+.stat-info span {
+
+    color: #5590b5;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   MAP SECTION
+   ========================================================= */
+
+.map-section {
+
+    background: #091b2a;
+
+    border:
+        1px solid #1a394e;
+
+    border-radius: 16px;
+
+    padding:
+        29px 22px 22px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   MAP HEADER
+   ========================================================= */
+
+.map-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-bottom: 20px;
+}
+
+
+.map-label {
+
+    color: #0db3ee;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 4px;
+}
+
+
+.map-header h3 {
+
+    font-size: 19px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   MAP LEGEND
+   ========================================================= */
+
+.map-legend {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding-top: 8px;
+}
+
+
+.legend-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #8fa8ba;
+
+    font-size: 12px;
+}
+
+
+.legend-dot {
+
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    display: inline-block;
+}
+
+
+.legend-dot.flood {
+
+    background: #2196d2;
+
+    box-shadow:
+        0 0 7px rgba(33, 150, 210, 0.4);
+}
+
+
+.legend-dot.road {
+
+    background: #ffae3d;
+
+    box-shadow:
+        0 0 7px rgba(255, 174, 61, 0.4);
+}
+
+
+.legend-dot.critical {
+
+    background: #ff4242;
+
+    box-shadow:
+        0 0 7px rgba(255, 66, 66, 0.4);
+}
+
+
+/* =========================================================
+   LEAFLET MAP
+   ========================================================= */
+
+#map {
+
+    width: 100%;
+
+    height: 590px;
+
+    min-height: 590px;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    background: #102130;
+}
+
+
+/* =========================================================
+   LEAFLET CONTROLS
+   ========================================================= */
+
+.leaflet-control-zoom {
+
+    border: none !important;
+
+    box-shadow:
+        0 2px 7px rgba(0, 0, 0, 0.25) !important;
+}
+
+
+.leaflet-control-zoom a {
+
+    width: 38px !important;
+
+    height: 38px !important;
+
+    line-height: 38px !important;
+
+    background: rgba(255, 255, 255, 0.94) !important;
+
+    color: #111 !important;
+
+    border-bottom:
+        1px solid #ccc !important;
+
+    font-size: 25px !important;
+}
+
+
+.leaflet-control-zoom a:hover {
+
+    background: #ffffff !important;
+}
+
+
+/* =========================================================
+   LEAFLET LAYER CONTROL
+   ========================================================= */
+
+.leaflet-control-layers {
+
+    background:
+        rgba(8, 25, 40, 0.96) !important;
+
+    color: #ffffff !important;
+
+    border:
+        1px solid #27465c !important;
+
+    border-radius: 9px !important;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.35) !important;
+}
+
+
+.leaflet-control-layers label {
+
+    color: #ffffff !important;
+
+    font-size: 12px;
+
+    padding: 3px;
+}
+
+
+.leaflet-control-layers-separator {
+
+    border-top-color: #315064 !important;
+}
+
+
+/* =========================================================
+   LEAFLET POPUPS
+   ========================================================= */
+
+.leaflet-popup-content-wrapper {
+
+    background: #0b1e2e;
+
+    color: #ffffff;
+
+    border:
+        1px solid #29465b;
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+
+.leaflet-popup-tip {
+
+    background: #0b1e2e;
+}
+
+
+.leaflet-popup-content {
+
+    margin: 13px;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   EMERGENCY INSIGHT
+   ========================================================= */
+
+.insight-section {
+
+    margin-top: 22px;
+
+    background: #0a1c2b;
+
+    border:
+        1px solid #1a394e;
+
+    border-radius: 14px;
+
+    padding: 21px;
+}
+
+
+.insight-left {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+}
+
+
+.insight-symbol {
+
+    width: 45px;
+
+    height: 45px;
+
+    min-width: 45px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #182b38;
+
+    font-size: 19px;
+}
+
+
+.insight-label {
+
+    color: #0db3ee;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 3px;
+}
+
+
+.insight-section h3 {
+
+    font-size: 17px;
+
+    margin-bottom: 4px;
+}
+
+
+.insight-section #insight {
+
+    color: #6791ab;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   ISOLATION MARKERS
+   ========================================================= */
+
+.dot.isolation {
+
+    background: #ff9800;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .sidebar {
+
+        width: 235px;
+    }
+
+
+    .main-content {
+
+        margin-left: 235px;
+
+        padding:
+            32px 25px;
+    }
+
+
+    .stats-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .page-title h2 {
+
+        font-size: 29px;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .sidebar {
+
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+
+        min-height: auto;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid #183248;
+    }
+
+
+    .logo-section {
+
+        height: 85px;
+
+        border-bottom: none;
+    }
+
+
+    .system-card {
+
+        display: none;
+    }
+
+
+    .sidebar-nav {
+
+        display: flex;
+
+        padding: 0 10px 12px;
+
+        gap: 5px;
+    }
+
+
+    .nav-item {
+
+        margin: 0;
+
+        padding: 0 12px;
+
+        height: 42px;
+
+        border-radius: 7px;
+
+        font-size: 12px;
+    }
+
+
+    .main-content {
+
+        margin-left: 0;
+
+        padding: 25px 18px;
+    }
+
+
+    .top-header {
+
+        align-items: flex-start;
+    }
+
+
+    .page-title h2 {
+
+        font-size: 26px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .top-header {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .header-actions {
+
+        justify-content: space-between;
+    }
+
+
+    .stats-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .stat-card {
+
+        height: 125px;
+    }
+
+
+    .map-header {
+
+        flex-direction: column;
+
+        gap: 13px;
+    }
+
+
+    .map-legend {
+
+        padding-top: 0;
+    }
+
+
+    #map {
+
+        height: 450px;
+
+        min-height: 450px;
+    }
+}
+
+
+@media (max-width: 420px) {
+
+    .main-content {
+
+        padding:
+            20px 12px;
+    }
+
+
+    .logo-text h1 {
+
+        font-size: 23px;
+    }
+
+
+    .page-title h2 {
+
+        font-size: 23px;
+    }
+
+
+    .refresh-button {
+
+        flex: 1;
+    }
+
+
+    .map-section {
+
+        padding:
+            20px 12px 12px;
+    }
+
+
+    #map {
+
+        height: 400px;
+
+        min-height: 400px;
+    }
+}
+
+/* =====================================================
+   FLOODRA ANALYSIS REPORT
+   ===================================================== */
+
+#analysisReportSection {
+    margin-top: 24px;
+}
+
+.report-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.report-item {
+    padding: 14px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 10px;
+    background: rgba(15, 23, 42, 0.45);
+}
+
+.report-item span {
+    display: block;
+    margin-bottom: 8px;
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.report-item strong {
+    color: #e2e8f0;
+    font-size: 20px;
+    overflow-wrap: anywhere;
+}
+
+#reportValidation {
+    margin-top: 14px;
+    color: #fbbf24;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .report-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =====================================================
+   ROAD RISK DISTRIBUTION
+   ===================================================== */
+
+.risk-chart {
+    display: grid;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.risk-row {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr) 70px;
+    gap: 12px;
+    align-items: center;
+    font-size: 13px;
+}
+
+.risk-track {
+    height: 12px;
+    overflow: hidden;
+    background: rgba(148, 163, 184, 0.18);
+    border-radius: 20px;
+}
+
+.risk-fill {
+    height: 100%;
+    border-radius: inherit;
+}
+
+.risk-count {
+    text-align: right;
+    color: #e2e8f0;
+}
+
+@media (max-width: 600px) {
+    .risk-row {
+        grid-template-columns: 90px minmax(0, 1fr) 50px;
+        gap: 8px;
+    }
+}
+
+/* =====================================================
+   RESCUE PRIORITY TABLE
+   ===================================================== */
+
+.table-wrapper {
+    width: 100%;
+    margin-top: 18px;
+    overflow-x: auto;
+}
+
+.rescue-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #e2e8f0;
+    font-size: 13px;
+    text-align: left;
+}
+
+.rescue-table th,
+.rescue-table td {
+    padding: 13px 12px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+    white-space: nowrap;
+}
+
+.rescue-table th {
+    color: #7dd3fc;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+
+.rescue-table tbody tr:hover {
+    background: rgba(56, 189, 248, 0.06);
+}
+
+.priority-badge {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.priority-critical {
+    color: #fecaca;
+    background: rgba(255, 23, 68, 0.18);
+}
+
+.priority-high {
+    color: #fed7aa;
+    background: rgba(255, 109, 0, 0.18);
+}
+
+.priority-medium {
+    color: #fef08a;
+    background: rgba(255, 214, 0, 0.13);
+}
+
+.priority-low {
+    color: #bbf7d0;
+    background: rgba(0, 230, 118, 0.12);
+}

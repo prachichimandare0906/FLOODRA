@@ -1,0 +1,239 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          697678.9311346817,
+          4217657.836099843
+        ]
+      },
+      "properties": {
+        "element": "node",
+        "id": 248460342,
+        "name": "Formentera del Segura",
+        "place": "village",
+        "population": "3084",
+        "baseline_connected": true,
+        "baseline_snap_distance_m": 54.17,
+        "snapped_to_network": true,
+        "snap_distance_m": 54.17,
+        "scenario_connected_to_largest_component": true,
+        "scenario_component_size": 2583,
+        "connectivity_status": "CONNECTED",
+        "scenario": "HIGH_RISK_ROADS_EXCLUDED",
+        "max_snap_distance_m": 500
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          696229.1838840211,
+          4218222.053927836
+        ]
+      },
+      "properties": {
+        "element": "node",
+        "id": 248460468,
+        "name": "Las Heredades",
+        "place": "hamlet",
+        "population": "432",
+        "baseline_connected": true,
+        "baseline_snap_distance_m": 49.87,
+        "snapped_to_network": true,
+        "snap_distance_m": 49.87,
+        "scenario_connected_to_largest_component": true,
+        "scenario_component_size": 2583,
+        "connectivity_status": "CONNECTED",
+        "scenario": "HIGH_RISK_ROADS_EXCLUDED",
+        "max_snap_distance_m": 500
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          696291.9604878053,
+          4220819.270157252
+        ]
+      },
+      "properties": {
+        "element": "node",
+        "id": 248462843,
+        "name": "Daya Nueva",
+        "place": "village",
+        "population": "1655",
+        "baseline_connected": true,
+        "baseline_snap_distance_m": 11.32,
+        "snapped_to_network": true,
+        "snap_distance_m": 11.32,
+        "scenario_connected_to_largest_component": true,
+        "scenario_component_size": 2583,
+        "connectivity_status": "CONNECTED",
+        "scenario": "HIGH_RISK_ROADS_EXCLUDED",
+        "max_snap_distance_m": 500
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          698320.874998988,
+          4219894.225586989
+        ]
+      },
+      "properties": {
+        "element": "node",
+        "id": 248462865,
+        "name": "Daya Vieja",
+        "place": "village",
+        "population": "551",
+        "baseline_connected": true,
+        "baseline_snap_distance_m": 12.98,
+        "snapped_to_network": true,
+        "snap_distance_m": 12.98,
+        "scenario_connected_to_largest_component": true,
+        "scenario_component_size": 2583,
+        "connectivity_status": "CONNECTED",
+        "scenario": "HIGH_RISK_ROADS_EXCLUDED",
+        "max_snap_distance_m": 500
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          696076.5736822959,
+          4222385.22413954
+        ]
+      },
+      "properties": {
+        "element": "node",
+        "id": 6401490543,
+        "name": "La Florida",
+        "place": "neighbourhood",
+        "population": null,
+        "baseline_connected": true,
+        "baseline_snap_distance_m": 265.36,
+        "snapped_to_network": true,
+        "snap_distance_m": 265.36,
+        "scenario_connected_to_largest_component": true,
+        "scenario_component_size": 2583,
+        "connectivity_status": "CONNECTED",
+        "scenario": "HIGH_RISK_ROADS_EXCLUDED",
+        "max_snap_distance_m": 500
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          695958.9516792749,
+          4219661.411147083
+        ]
+      },
+      "properties": {
+        "element": "node",
+        "id": 6605046374,
+        "name": "Barrio La Bodega",
+        "place": "neighbourhood",
+        "population": null,
+        "baseline_connected": true,
+        "baseline_snap_distance_m": 13.12,
+        "snapped_to_network": true,
+        "snap_distance_m": 13.12,
+        "scenario_connected_to_largest_component": true,
+        "scenario_component_size": 2583,
+        "connectivity_status": "CONNECTED",
+        "scenario": "HIGH_RISK_ROADS_EXCLUDED",
+        "max_snap_distance_m": 500
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          695530.6191840218,
+          4221224.355859153
+        ]
+      },
+      "properties": {
+        "element": "node",
+        "id": 6605057906,
+        "name": "Puebla de Rocamora",
+        "place": "neighbourhood",
+        "population": null,
+        "baseline_connected": true,
+        "baseline_snap_distance_m": 19.33,
+        "snapped_to_network": true,
+        "snap_distance_m": 19.33,
+        "scenario_connected_to_largest_component": true,
+        "scenario_component_size": 2583,
+        "connectivity_status": "CONNECTED",
+        "scenario": "HIGH_RISK_ROADS_EXCLUDED",
+        "max_snap_distance_m": 500
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          697738.2127031799,
+          4221365.154448635
+        ]
+      },
+      "properties": {
+        "element": "node",
+        "id": 12282459325,
+        "name": "Los Mart\u00ednez Segundo Barrio",
+        "place": "neighbourhood",
+        "population": "48",
+        "baseline_connected": true,
+        "baseline_snap_distance_m": 51.88,
+        "snapped_to_network": true,
+        "snap_distance_m": 51.88,
+        "scenario_connected_to_largest_component": true,
+        "scenario_component_size": 2583,
+        "connectivity_status": "CONNECTED",
+        "scenario": "HIGH_RISK_ROADS_EXCLUDED",
+        "max_snap_distance_m": 500
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          696389.1905449493,
+          4218262.055614604
+        ]
+      },
+      "properties": {
+        "element": "node",
+        "id": 12282459327,
+        "name": "Las Heredades",
+        "place": "hamlet",
+        "population": "241",
+        "baseline_connected": true,
+        "baseline_snap_distance_m": 11.05,
+        "snapped_to_network": true,
+        "snap_distance_m": 11.05,
+        "scenario_connected_to_largest_component": true,
+        "scenario_component_size": 2583,
+        "connectivity_status": "CONNECTED",
+        "scenario": "HIGH_RISK_ROADS_EXCLUDED",
+        "max_snap_distance_m": 500
+      }
+    }
+  ]
+}
